@@ -41,7 +41,3 @@ The agent can perform the following actions:
 - Rotate gun left/right
 - Fire bullets (different power levels)
 - Scan for enemies
-
-## Technical Implementation
-
-### Network Architecture
