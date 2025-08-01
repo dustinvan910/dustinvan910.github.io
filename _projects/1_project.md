@@ -1,83 +1,81 @@
 ---
 layout: page
-title: Customer Churn Prediction
-description: Machine Learning project for Data Mining class
+title: project 1
+description: with background image
 img: assets/img/12.jpg
 importance: 1
-category: machine learning
+category: work
 related_publications: true
 ---
 
-## Project Overview
+Every project has a beautiful feature showcase page.
+It's easy to include images in a flexible 3-column grid format.
+Make your photos 1/3, 2/3, or full width.
 
-This project focuses on predicting customer churn using machine learning techniques as part of my Data Mining course. Customer churn prediction is a critical business problem where companies aim to identify customers who are likely to discontinue their services, enabling proactive retention strategies.
+To give your project a background in the portfolio page, just add the img tag to the front matter like so:
 
-## Objectives
+    ---
+    layout: page
+    title: project
+    description: a project with a background image
+    img: /assets/img/12.jpg
+    ---
 
-- Develop predictive models to identify customers at risk of churning
-- Compare performance of different machine learning algorithms
-- Analyze feature importance to understand key factors driving customer churn
-- Provide actionable insights for customer retention strategies
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+</div>
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    This image can also have a caption. It's like magic.
+</div>
 
-## Dataset
+You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
+Say you wanted to write a bit about your project before you posted the rest of the images.
+You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
 
-The project utilized a telecommunications customer dataset containing:
-- Customer demographics (age, gender, location)
-- Service usage patterns (call duration, data usage, number of services)
-- Account information (contract type, payment method, monthly charges)
-- Historical behavior (customer service calls, complaints)
-- Target variable: Churn (Yes/No)
+<div class="row justify-content-sm-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+    <div class="col-sm-4 mt-3 mt-md-0">
+        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    You can also have artistically styled 2/3 + 1/3 images, like these.
+</div>
 
-## Methodology
+The code is simple.
+Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
+To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
+Here's the code for the last row of images above:
 
-### Data Preprocessing
-- Handled missing values using appropriate imputation techniques
-- Performed feature engineering to create new predictive variables
-- Applied data normalization and scaling for algorithm optimization
-- Addressed class imbalance using SMOTE (Synthetic Minority Oversampling Technique)
+{% raw %}
 
-### Machine Learning Models Implemented
+```html
+<div class="row justify-content-sm-center">
+  <div class="col-sm-8 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  </div>
+  <div class="col-sm-4 mt-3 mt-md-0">
+    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+  </div>
+</div>
+```
 
-1. **Logistic Regression**: Baseline model for interpretability
-2. **Random Forest**: Ensemble method for feature importance analysis
-3. **Support Vector Machine**: For non-linear pattern recognition
-4. **Gradient Boosting**: Advanced ensemble technique for optimal performance
-5. **Neural Networks**: Deep learning approach for complex pattern detection
-
-## Key Findings
-
-### Model Performance
-- **Best Model**: Gradient Boosting Classifier achieved 87% accuracy with 0.92 AUC-ROC
-- **Feature Importance**: Contract type, monthly charges, and tenure were top predictors
-- **Precision/Recall**: Achieved balanced performance with 85% precision and 83% recall
-
-### Business Insights
-- Customers with month-to-month contracts are 3x more likely to churn
-- High monthly charges without proportional service value increase churn risk
-- Customer service interactions correlate strongly with churn probability
-- Tenure serves as a strong protective factor against churn
-
-## Technical Implementation
-
-The project was implemented using Python with the following key libraries:
-- **Data Processing**: Pandas, NumPy
-- **Machine Learning**: Scikit-learn, XGBoost
-- **Visualization**: Matplotlib, Seaborn, Plotly
-- **Model Evaluation**: Cross-validation, ROC analysis, Confusion matrices
-
-
-## Results and Impact
-
-The churn prediction model successfully identified high-risk customers with 87% accuracy, enabling:
-- **Proactive Intervention**: Early identification of at-risk customers
-- **Resource Optimization**: Focused retention efforts on high-value, high-risk segments
-- **Cost Reduction**: Estimated 25% reduction in customer acquisition costs through improved retention
-
-## Future Work
-
-- **Real-time Prediction**: Implement streaming data processing for real-time churn scoring
-- **Advanced Techniques**: Explore deep learning architectures and ensemble methods
-- **A/B Testing**: Validate model predictions through controlled retention campaigns
-- **Feature Enhancement**: Incorporate social media sentiment and external economic indicators
-
-This project demonstrated the practical application of data mining techniques to solve real-world business problems, combining technical machine learning skills with business acumen to deliver actionable insights.
+{% endraw %}
