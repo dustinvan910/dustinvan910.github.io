@@ -5,7 +5,6 @@ description: Reinforcement learning agent using DDQN for autonomous robot combat
 img: assets/img/3.jpg
 importance: 2
 category: AI
-giscus_comments: true
 ---
 
 ## Project Overview
