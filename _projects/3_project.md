@@ -1,81 +1,58 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
+title: Email Phishing Detection
+description: Machine Learning models to detect phishing emails using SVM, Logistic Regression, Naive Bayes, and Random Forest
 img: assets/img/7.jpg
-redirect: https://unsplash.com
 importance: 3
-category: work
+category: machine learning
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+## Email Phishing Detection Using Machine Learning
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+This project focuses on developing and comparing multiple machine learning models to detect phishing emails. The goal is to create an effective classification system that can automatically identify malicious emails and protect users from phishing attacks.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+### Models Implemented
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+I developed and evaluated four different machine learning algorithms:
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+- **Support Vector Machine (SVM)**: Effective for high-dimensional text data with clear margin separation
+- **Logistic Regression**: Linear classifier providing probabilistic outputs and interpretability
+- **Naive Bayes**: Probabilistic classifier well-suited for text classification tasks
+- **Random Forest**: Ensemble method combining multiple decision trees for robust predictions
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### Project Overview
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+The detection system provides comprehensive email analysis through advanced machine learning techniques, combining multiple algorithms to achieve optimal phishing detection performance.
 
-{% raw %}
+### Key Features
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+The detection system analyzes various aspects of emails:
 
-{% endraw %}
+- **Text Content Analysis**: Natural language processing of email body and subject lines
+- **Header Information**: Examination of sender details, routing information, and metadata
+- **URL Analysis**: Detection of suspicious links and domains
+- **Feature Engineering**: Creation of relevant features for machine learning models
+
+### Technical Implementation
+
+The project involved extensive data preprocessing, feature extraction, and model optimization:
+
+1. **Data Collection**: Gathered labeled dataset of legitimate and phishing emails
+2. **Preprocessing**: Text cleaning, tokenization, and normalization
+3. **Feature Engineering**: TF-IDF vectorization, n-gram analysis, and custom features
+4. **Model Training**: Implementation and tuning of all four algorithms
+5. **Evaluation**: Comprehensive performance analysis using accuracy, precision, recall, and F1-score
+
+### Results and Performance
+
+All four models demonstrated strong performance in detecting phishing emails, with comprehensive evaluation metrics including accuracy, precision, recall, and F1-scores. The comparison revealed the strengths and weaknesses of each approach, providing valuable insights for email security applications.
+
+### Technologies Used
+
+- **Python**: Primary programming language
+- **Scikit-learn**: Machine learning library for model implementation
+- **Pandas & NumPy**: Data manipulation and numerical computing
+- **NLTK/spaCy**: Natural language processing
+- **Matplotlib/Seaborn**: Data visualization
+
+This project demonstrates the effectiveness of different machine learning approaches in cybersecurity applications and provides insights into email-based threat detection systems.
